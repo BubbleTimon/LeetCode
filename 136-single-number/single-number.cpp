@@ -5,15 +5,8 @@ public:
         int ret = 0;
 
         for (int i : nums)
-            m[i]++;
-
-        for (auto it = m.begin(); it != m.end(); it++) {
-            if (it->second == 1) {
-                ret = it->first;
-                break;
-            }
-        }
-
+            ret ^= i;
+            
         return ret;
     }
 };
